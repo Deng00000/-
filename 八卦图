@@ -1,0 +1,22 @@
+import tkinter as tk
+
+# 创建窗口
+window = tk.Tk()
+window.geometry("800x600")
+
+# 定义五行八卦图形
+five_elements = [    ["☰", "☷", "☳", "☴", "☵"],
+    ["☲", "☱", "☶", "☱", "☳"],
+    ["☱", "☶", "☵", "☶", "☱"],
+    ["☴", "☳", "☱", "☷", "☰"],
+    ["☵", "☴", "☲", "☵", "☶"],
+]
+
+# 绘制五行八卦图形
+for i in range(5):
+    for j in range(5):
+        label = tk.Label(window, text=five_elements[i][j], font=("Arial", 32))
+        label.grid(row=i, column=j)
+
+# 显示窗口
+window.mainloop()
